@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import HeaderNav from '../components/header_nav';
 
 export default function Home() {
   return (
     <main className="">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <HeaderNav />
     </main>
   );
 }
