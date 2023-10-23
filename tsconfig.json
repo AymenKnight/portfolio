@@ -25,7 +25,7 @@
       // "@containers/*": ["src/ui/containers/*"],
       // "@layers/*": ["src/ui/layers/*"],
       "@assets/*": ["/public/*"],
-      "@libs/*": ["/src/lib/*"],
+      "@libs/*": ["/lib/*"],
       // "@constants/*": ["src/utils/constants/*"],
       // "@helpers/*": ["src/utils/helpers/*"],
       // "@models/*": ["src/models/*"],
