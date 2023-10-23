@@ -18,19 +18,20 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["/src/components/*"],
+      "@/*": ["*"],
+      "@/components/*": ["src/components/*"],
       // "@buttons/*": ["src/ui/components/buttons/*"],
       // "@containers/*": ["src/ui/containers/*"],
       // "@layers/*": ["src/ui/layers/*"],
-      "@assets/*": ["/public/*"],
-      "@libs/*": ["/lib/*"],
+      "@/assets/*": ["public/*"],
+      "@/libs/*": ["lib/*"],
       // "@constants/*": ["src/utils/constants/*"],
       // "@helpers/*": ["src/utils/helpers/*"],
       // "@models/*": ["src/models/*"],
-      "toSvg/*": ["/public/svg/*"],
-      "toPng/*": ["/public/pictures/*"]
+      "@/toSvg/*": ["public/svg/*"],
+      "@/toPng/*": ["public/pictures/*"]
       // "@api/*": ["src/API/*"],
       // "@colors": ["src/assets/styles/color.ts"],
       // "@services/*": ["src/services/*"],
