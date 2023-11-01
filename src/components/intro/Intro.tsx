@@ -1,3 +1,4 @@
+import TextButton from '../buttons/text_button';
 import CircleAvatar from '../circle_avatar';
 import UserDescription from '../user_description';
 
@@ -7,6 +8,7 @@ export default function Intro({}: IntroProps) {
     <section className="flex  flex-col items-center justify-center  gap-5 max-w-[54rem]  px-6  ">
       <CircleAvatar />
       <UserDescription />
+      <TextButton />
     </section>
   );
 }
