@@ -4,5 +4,9 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "cSpell.words": ["clsx"]
 }
