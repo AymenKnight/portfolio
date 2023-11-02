@@ -8,7 +8,6 @@ export default function Intro({}: IntroProps) {
     <section className="flex  flex-col items-center justify-center  gap-5 max-w-[54rem]  px-6  ">
       <CircleAvatar />
       <UserDescription />
-      <TextButton />
     </section>
   );
 }
