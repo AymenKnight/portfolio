@@ -15,7 +15,7 @@ export default function TextButton({
   return (
     <button
       className={cn(
-        'w-fit h-fit px-4 py-2 text-white rounded-full flex flex-row items-center justify-center gap-2',
+        'w-fit h-fit px-4 py-2 text-white rounded-full flex flex-row items-center justify-center gap-2 outline-none transition-all cursor-pointer',
         className,
       )}
       {...otherProps}
