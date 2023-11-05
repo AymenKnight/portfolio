@@ -12,7 +12,7 @@ export default function ControlsSection({}: ControlsSectionProps) {
 
   return (
     <motion.div
-      className="flex flex-col sm:flex-row items-center  flex-grow p-10 gap-3 text-lg font-medium"
+      className="flex flex-col sm:flex-row items-center  flex-grow gap-3 text-lg font-medium"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
