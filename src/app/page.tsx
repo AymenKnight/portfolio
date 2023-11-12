@@ -7,7 +7,7 @@ import ProjectsList from '../components/projects_list';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center gap-10 px-5  ">
+    <main className="flex flex-col items-center justify-center gap-10 px-5 ">
       <HeaderNav />
       <Intro />
       <ControlsSection />

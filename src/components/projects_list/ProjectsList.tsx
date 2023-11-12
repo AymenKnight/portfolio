@@ -5,7 +5,10 @@ import ProjectItem from '../project_item';
 interface ProjectsListProps {}
 export default function ProjectsList({}: ProjectsListProps) {
   return (
-    <section className="flex flex-col gap-10 items-center justify-center sm:max-w-[70rem]">
+    <section
+      id="projects"
+      className="flex flex-col gap-10 items-center justify-center sm:max-w-[70rem] scroll-mt-28"
+    >
       <SectionHeading>My projects</SectionHeading>
       <div className="flex flex-col gap-5">
         {projectsData.map((project, index) => (

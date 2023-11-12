@@ -7,7 +7,8 @@ interface AboutMeProps {}
 export default function AboutMe({}: AboutMeProps) {
   return (
     <motion.section
-      className="flex flex-col items-center justify-center gap-5 max-w-[45rem] leading-8 "
+      id="about"
+      className="flex flex-col items-center justify-center gap-5 max-w-[45rem] leading-8 scroll-mt-28 "
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
