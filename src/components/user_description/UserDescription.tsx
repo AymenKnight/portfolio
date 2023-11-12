@@ -7,7 +7,7 @@ interface UserDescriptionProps {}
 export default function UserDescription({}: UserDescriptionProps) {
   return (
     <motion.p
-      className="text-2xl font-medium !leading-[1.5] sm:text-3xl"
+      className="text-2xl font-medium !leading-[1.4] sm:text-2xl"
       initial={{
         y: 100,
         opacity: 0,

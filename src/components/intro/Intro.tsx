@@ -1,7 +1,5 @@
-import TextButton from '../buttons/text_button';
 import CircleAvatar from '../circle_avatar';
 import UserDescription from '../user_description';
-
 
 interface IntroProps {}
 export default function Intro({}: IntroProps) {

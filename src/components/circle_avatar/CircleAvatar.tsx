@@ -22,7 +22,7 @@ export default function CircleAvatar({}: CircleAvatarProps) {
         width={180}
         height={180}
         priority={true}
-        className=" border-white border-solid border-[0.35rem] shadow-sm  rounded-full
+        className=" border-gray-500 border-solid border-[0.35rem] shadow-sm  rounded-full
         w-[180px] h-[180px]  object-cover  "
       />
       <motion.div
