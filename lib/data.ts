@@ -69,7 +69,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: 'Dr-jarvis',
-    description: 'a doctor management app built using Java.',
+    description: 'A doctor management app built using Java.',
     tags: ['Java', 'JAVAFX', 'CSS'],
     imageUrl: drJarvis,
   },
@@ -78,7 +78,7 @@ export const projectsData = [
     description:
       'The app showcases various clothing items and provides features such as authentication with Firebase, persistence of chosen clothes by the user, and the ability to checkout using Stripe.',
     tags: ['React', 'JavaScript', 'CSS', 'SCSS', 'Firebase', 'Stripe'],
-    imageUrl: drJarvis,
+    imageUrl: commerce,
   },
   {
     title: 'Pisri',
@@ -96,7 +96,8 @@ export const projectsData = [
       'TypeScript',
       'CSS',
       'SCSS',
-      'Electron.js,"Nest.js',
+      'Electron.js',
+      'Nest.js',
       'PostgreSQL',
       'Prisma',
     ],
