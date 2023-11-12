@@ -5,11 +5,17 @@ import ProjectItem from '../project_item';
 interface ProjectsListProps {}
 export default function ProjectsList({}: ProjectsListProps) {
   return (
-    <section className="">
+    <section className="flex flex-col gap-10 items-center justify-center sm:max-w-[70rem]">
       <SectionHeading>My projects</SectionHeading>
-      <div className="">
+      <div className="flex flex-col gap-5">
         {projectsData.map((project, index) => (
-          <ProjectItem key={index} />
+          <ProjectItem
+            key={index}
+            title={project.title}
+            description={project.description}
+            tags={project.tags}
+            imageUrl={project.imageUrl}
+          />
         ))}
       </div>
     </section>
