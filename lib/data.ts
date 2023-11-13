@@ -7,9 +7,7 @@ import drJarvis from '@/public/pictures/drJarvis.jpg';
 import commerce from '@/public/pictures/commerce.png';
 import walid from '@/public/pictures/walid.png';
 import realtor from '@/public/pictures/realtor.png';
-
-//TODO change the description with yours
-//TODO change the images with your projects images
+import nft from '@/public/pictures/nft.png';
 
 export const links = [
   {
@@ -110,6 +108,13 @@ export const projectsData = [
       'Lotus Launcher is a simple utility app for launching the Clinicord server. It provides a convenient way to launch the server and access its features.',
     tags: ['React', 'Tauri', 'TypeScript', 'JavaScript', 'Rust'],
     imageUrl: lotusLauncher,
+  },
+  {
+    title: 'Image Gallery Store',
+    description:
+      'The app showcases various images with the modern design and provides features such as persistence of chosen images by the user, and the ability to checkout.',
+    tags: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'],
+    imageUrl: nft,
   },
 
   // {
