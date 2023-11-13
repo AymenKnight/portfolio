@@ -1,4 +1,5 @@
 'use client';
+import { cn } from '@/lib/utils';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
@@ -29,10 +30,26 @@ export default function ProjectItem({
       className="group"
     >
       <motion.section
-        className="  flex flex-col-reverse sm:flex-row sm:group-even:flex-row-reverse gap-5 sm:justify-between
-      bg-gray-100 hover:bg-gray-200 transition sm:pt-8 rounded-2xl overflow-hidden border border-black/5 "
+        className="  flex flex-col   gap-5 sm:justify-between relative
+      bg-gray-100 hover:bg-gray-200 transition rounded-2xl overflow-hidden border border-black/5 shadow-sm "
       >
-        <div className="flex flex-col gap-3 pl-2 sm:pl-8 sm:pr-2">
+        <div
+          className="absolute hidden sm:block inset-0 bg-cover bg-center filter blur-sm h-[20rem] max-h-[20rem] sm:h-[26rem] sm:max-h-[26rem] "
+          style={{ backgroundImage: `url(${imageUrl.src})` }}
+        ></div>
+        <Image
+          src={imageUrl}
+          alt={title}
+          quality={100}
+          className={cn(
+            `w-full h-[20rem] max-h-[20rem]    sm:h-[26rem]  sm:max-h-[26rem]  object-center  object-fill sm:object-contain
+          group-hover:scale-x-[1.05] 
+            transition self-end brightness-100
+          `,
+            title === 'Lotus Launcher' && 'object-contain',
+          )}
+        />
+        <div className="flex flex-col gap-3 pl-2 sm:pl-8 sm:pr-2 w-full">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="text-lg font-medium text-gray-700 leading-relaxed">
             {description}
@@ -48,16 +65,6 @@ export default function ProjectItem({
             ))}
           </div>
         </div>
-        <Image
-          src={imageUrl}
-          alt={title}
-          quality={100}
-          className="w-full max-h-[20rem] sm:max-h-none sm:h-[28rem]  sm:max-w-[50%] group-odd:rounded-tl-2xl shadow-2xl object-center  object-fill group-even:rounded-tr-2xl
-        group-hover:scale-[1.05] 
-         sm:group-hover:translate-x-3 sm:group-hover:translate-y-3 sm:group-hover:-rotate-1
-         sm:group-even:group-hover:-translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-1
-          transition self-end "
-        />
       </motion.section>
     </motion.div>
   );
