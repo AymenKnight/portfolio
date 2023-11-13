@@ -1,27 +1,30 @@
 'use client';
 
 import { links } from '@/lib/data';
+import { cn } from '@/lib/utils';
+import { useNavigationStore } from '@/services/navigationStore';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 interface HeaderNavProps {}
 export default function HeaderNav({}: HeaderNavProps) {
+  const { activeNav, setActiveNav } = useNavigationStore((state) => state);
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="header-nav
-        flex items-center justify-center
+        className={cn(`header-nav   
       fixed top-0 left-1/2 -translate-x-1/2  
       w-full min-h-[3.25rem] bg-gray-200 rounded-none border border-gray-200 border-opacity-40 bg-opacity-80 backdrop-blur-[0.5rem] 
       sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full
       shadow-lg shadow-black/[0.03] 
-      "
+      `)}
         initial={{ opacity: 0, y: -100, x: '-50%' }}
         animate={{ opacity: 1, y: 0, x: '-50%' }}
       >
         <nav
           className="flex  h-full  
-          py-0
+          py-2
+          sm:py-0
           flex-grow
          flex-row items-center justify-center "
         >
@@ -34,14 +37,34 @@ export default function HeaderNav({}: HeaderNavProps) {
           >
             {links.map((link) => (
               <li
-                className="h-3/4 flex items-center justify-center "
+                className={cn(
+                  `h-3/4 flex items-center justify-center  px-4 py-1 transition-all relative `,
+                )}
                 key={link.hash}
               >
                 <Link
-                  className=" flex items-center justify-center px-2 py-1 hover:text-gray-950 transition"
+                  className={cn(
+                    `flex items-center justify-center  hover:text-gray-950 transition-all   `,
+                    link.hash === activeNav ? 'text-gray-950 ' : '',
+                  )}
                   href={link.hash}
+                  onClick={() => {
+                    setActiveNav(link.hash);
+                  }}
                 >
                   {link.name}
+                  {activeNav === link.hash && (
+                    <motion.div
+                      className="absolute bottom-0 left-0 h-full bg-gray-50 rounded-full -z-10 w-full"
+                      layoutId="activeNav"
+                      aria-hidden="true"
+                      transition={{
+                        type: 'spring',
+                        stiffness: 400,
+                        damping: 30,
+                      }}
+                    />
+                  )}
                 </Link>
               </li>
             ))}
