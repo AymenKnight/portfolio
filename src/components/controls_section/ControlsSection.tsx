@@ -12,13 +12,13 @@ export default function ControlsSection({}: ControlsSectionProps) {
 
   return (
     <motion.div
-      className="flex flex-col sm:flex-row items-center  flex-grow gap-3 text-lg font-medium"
+      className="flex flex-col sm:flex-row items-center  flex-grow gap-3 text-base font-medium"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
       <TextButton
-        className=" group bg-gray-900 hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105  text-white "
+        className=" group bg-gray-900 hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105  text-white  "
         text="Contact me here"
         onClick={() => router.push('#contact')}
       >

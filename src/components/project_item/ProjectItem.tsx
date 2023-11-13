@@ -52,7 +52,7 @@ export default function ProjectItem({
           src={imageUrl}
           alt={title}
           quality={100}
-          className="w-full max-h-[20rem] sm:h-[28rem]  sm:max-w-[50%] group-odd:rounded-tl-2xl shadow-2xl object-center  object-fill group-even:rounded-tr-2xl
+          className="w-full max-h-[20rem] sm:max-h-none sm:h-[28rem]  sm:max-w-[50%] group-odd:rounded-tl-2xl shadow-2xl object-center  object-fill group-even:rounded-tr-2xl
         group-hover:scale-[1.05] 
          sm:group-hover:translate-x-3 sm:group-hover:translate-y-3 sm:group-hover:-rotate-1
          sm:group-even:group-hover:-translate-x-3 sm:group-even:group-hover:translate-y-3 sm:group-even:group-hover:rotate-1
