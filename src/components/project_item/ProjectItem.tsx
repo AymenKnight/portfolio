@@ -1,4 +1,5 @@
 'use client';
+import { useSectionInView } from '@/lib/hooks';
 import { cn } from '@/lib/utils';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
@@ -16,6 +17,10 @@ export default function ProjectItem({
   tags,
   imageUrl,
 }: ProjectItemProps) {
+  const { ref: sectionRef } = useSectionInView({
+    sectionName: '#projects',
+    threshold: 0.1,
+  });
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,6 +35,7 @@ export default function ProjectItem({
       className="group"
     >
       <motion.section
+        ref={sectionRef}
         className="  flex flex-col   gap-5 sm:justify-between relative
       bg-gray-100 hover:bg-gray-200 transition rounded-2xl overflow-hidden border border-black/5 shadow-sm "
       >
