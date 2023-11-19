@@ -8,7 +8,10 @@ import Link from 'next/link';
 
 interface HeaderNavProps {}
 export default function HeaderNav({}: HeaderNavProps) {
-  const { activeNav, setActiveNav } = useNavigationStore((state) => state);
+  const { activeNav, setActiveNav, setTimeOfLastClick } = useNavigationStore(
+    (state) => state,
+  );
+  console.log('activeNav', activeNav);
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -50,6 +53,7 @@ export default function HeaderNav({}: HeaderNavProps) {
                   href={link.hash}
                   onClick={() => {
                     setActiveNav(link.hash);
+                    setTimeOfLastClick(Date.now());
                   }}
                 >
                   {link.name}
