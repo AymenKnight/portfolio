@@ -1,12 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
+
 import SectionHeading from '../section_heading';
 import { motion } from 'framer-motion';
+import { useNavigationStore } from '@/services/navigationStore';
+import { useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 interface AboutMeProps {}
 export default function AboutMe({}: AboutMeProps) {
+  const setActiveNav = useNavigationStore.getState().setActiveNav;
+
+  const { ref, inView } = useInView({
+    threshold: 0.8,
+  });
+  useEffect(() => {
+    if (inView) {
+      setActiveNav('#about');
+    }
+    return () => {};
+  }, [inView, setActiveNav]);
+
   return (
     <motion.section
+      ref={ref}
       id="about"
       className="flex flex-col items-center justify-center gap-5 max-w-[45rem] leading-8 scroll-mt-28 "
       initial={{ opacity: 0, y: 100 }}
