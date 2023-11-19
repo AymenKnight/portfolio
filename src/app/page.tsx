@@ -4,6 +4,7 @@ import ControlsSection from '../components/controls_section';
 import BorderDivider from '../components/border_divider';
 import AboutMe from '../components/about_me';
 import ProjectsList from '../components/projects_list';
+import Skills from '../components/skills';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <BorderDivider />
       <AboutMe />
       <ProjectsList />
+      <Skills />
     </main>
   );
 }
