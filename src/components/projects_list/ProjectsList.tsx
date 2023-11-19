@@ -3,23 +3,15 @@
 import { projectsData } from '@/lib/data';
 import SectionHeading from '../section_heading';
 import ProjectItem from '../project_item';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { useNavigationStore } from '@/services/navigationStore';
+import { useSectionInView } from '@/lib/hooks';
 
 interface ProjectsListProps {}
 export default function ProjectsList({}: ProjectsListProps) {
-  const setActiveNav = useNavigationStore.getState().setActiveNav;
-
-  const { ref, inView } = useInView({
+  const { ref } = useSectionInView({
+    sectionName: '#projects',
     threshold: 0.1,
   });
-  useEffect(() => {
-    if (inView) {
-      setActiveNav('#projects');
-    }
-    return () => {};
-  });
+
   return (
     <section
       ref={ref}

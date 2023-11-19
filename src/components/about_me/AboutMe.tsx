@@ -3,23 +3,14 @@
 
 import SectionHeading from '../section_heading';
 import { motion } from 'framer-motion';
-import { useNavigationStore } from '@/services/navigationStore';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useSectionInView } from '@/lib/hooks';
 
 interface AboutMeProps {}
 export default function AboutMe({}: AboutMeProps) {
-  const setActiveNav = useNavigationStore.getState().setActiveNav;
-
-  const { ref, inView } = useInView({
+  const { ref } = useSectionInView({
+    sectionName: '#about',
     threshold: 0.8,
   });
-  useEffect(() => {
-    if (inView) {
-      setActiveNav('#about');
-    }
-    return () => {};
-  }, [inView, setActiveNav]);
 
   return (
     <motion.section

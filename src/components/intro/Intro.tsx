@@ -1,24 +1,16 @@
 'use client';
 
-import { useNavigationStore } from '@/services/navigationStore';
 import CircleAvatar from '../circle_avatar';
 import UserDescription from '../user_description';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import { useSectionInView } from '@/lib/hooks';
 
 interface IntroProps {}
 export default function Intro({}: IntroProps) {
-  const setActiveNav = useNavigationStore.getState().setActiveNav;
-
-  const { ref, inView } = useInView({
+  const { ref } = useSectionInView({
+    sectionName: '#home',
     threshold: 0.5,
   });
-  useEffect(() => {
-    if (inView) {
-      setActiveNav('#home');
-    }
-    return () => {};
-  }, [inView, setActiveNav]);
+
   return (
     <section
       ref={ref}
