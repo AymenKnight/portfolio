@@ -24,7 +24,7 @@ export default function Skills({}: SkillsProps) {
     <section
       ref={ref}
       id="skills"
-      className="flex flex-col items-center justify-center gap-5 max-w-[53rem] leading-8 scroll-mt-28 "
+      className="flex flex-col items-center justify-center gap-5 max-w-[53rem] leading-8 scroll-mt-28 py-5 "
     >
       <SectionHeading>My skills</SectionHeading>
       <div className="flex  flex-wrap gap-2 justify-center text-lg font-medium text-gray-800">
