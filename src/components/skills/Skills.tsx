@@ -18,7 +18,7 @@ interface SkillsProps {}
 export default function Skills({}: SkillsProps) {
   const { ref } = useSectionInView({
     sectionName: '#skills',
-    threshold: 0.5,
+    threshold: 1,
   });
   return (
     <section
