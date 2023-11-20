@@ -5,6 +5,7 @@ import BorderDivider from '../components/border_divider';
 import AboutMe from '../components/about_me';
 import ProjectsList from '../components/projects_list';
 import Skills from '../components/skills';
+import Experience from '../components/experience';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutMe />
       <ProjectsList />
       <Skills />
+      <Experience />
     </main>
   );
 }
