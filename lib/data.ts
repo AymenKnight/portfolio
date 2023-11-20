@@ -38,29 +38,33 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Software Developer',
-    description:
-      'I worked as a full-stack developer on this startup company for 2 years.',
-    tags: [
-      'React',
-      'TypeScript',
-      'Nest js',
-      'SCSS',
-      'Prisma',
-      'PostgreSQL',
-      'JAVAFX',
-      'JavaScript',
-      'HTML',
-      'CSS',
-    ],
-    imageUrl: doctorIO,
+    title: 'Computer Science graduated',
+    location: 'University of saad dahleb - Blida',
+    description: 'I graduated with a Bachelors degree in Computer Science.',
+    icon: React.createElement(LuGraduationCap),
+    date: '2020',
   },
   {
-    title: 'Graduated Software Engineer',
-    location: 'Blida, Algeria',
-    description: 'I graduated after 2 years of studying.',
+    title: 'Network engineering graduated',
+    location: 'University of saad dahleb - Blida',
+    description: 'I graduated with a Master degree in Network Engineering.',
     icon: React.createElement(LuGraduationCap),
-    date: '2019',
+    date: '2022',
+  },
+  {
+    title: 'Software Developer',
+    location: 'Blida',
+    description:
+      'I worked as a full-stack developer on Dzbracket company for 2 years on part time.',
+    date: '2020-2022',
+    icon: React.createElement(LuGraduationCap),
+  },
+  {
+    title: 'Freelance Developer',
+    location: 'Remote',
+    description: 'Working as a freelance software developer.',
+    date: '2023-Now',
+    icon: React.createElement(LuGraduationCap),
   },
 ] as const;
 
