@@ -5,6 +5,7 @@ import SectionHeading from '../section_heading';
 import TextButton from '../buttons/text_button';
 import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { sendEmail } from '@/services/server_actions/actions';
 
 interface ContactProps {}
 export default function Contact({}: ContactProps) {
@@ -34,23 +35,35 @@ export default function Contact({}: ContactProps) {
         </a>{' '}
         or by using the form below.
       </p>
-      <form className="flex flex-col gap-3 w-full max-w-[40rem]">
+      <form
+        className="flex flex-col gap-3 w-full max-w-[40rem]"
+        action={async (formData) => {
+          console.log(formData.get('email'));
+          console.log(formData.get('message'));
+          await sendEmail(formData);
+        }}
+      >
         <input
           type="email"
           name="email"
+          required
+          maxLength={500}
           placeholder="Insert your email"
           className="border border-black/10 p-3 rounded-lg"
         />
         <textarea
           name="message"
+          required
+          maxLength={500}
           placeholder="Insert your message"
           className="border border-black/10 p-3 rounded-lg"
         />
 
         <TextButton
+          type="submit"
           text="Send"
           className=" text-white px-3 py-2 rounded-lg w-full
-          bg-gray-900 hover:bg-gray-950 hover:scale-105 focus:scale-105 active:scale-105  
+          bg-gray-900 hover:bg-gray-950 hover:scale-105 focus:scale-105 active:scale-100  
           "
         >
           <FaPaperPlane className="w-5 h-4" />
