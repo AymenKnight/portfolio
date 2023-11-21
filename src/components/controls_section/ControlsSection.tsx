@@ -5,10 +5,12 @@ import { BsArrowRight, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { useNavigationStore } from '@/services/navigationStore';
 
 interface ControlsSectionProps {}
 export default function ControlsSection({}: ControlsSectionProps) {
   const router = useRouter();
+  const { setActiveNav, setTimeOfLastClick } = useNavigationStore.getState();
 
   return (
     <motion.div
@@ -20,7 +22,11 @@ export default function ControlsSection({}: ControlsSectionProps) {
       <TextButton
         className=" group bg-gray-900 hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105  text-white  "
         text="Contact me here"
-        onClick={() => router.push('#contact')}
+        onClick={() => {
+          setActiveNav('#contact');
+          setTimeOfLastClick(Date.now());
+          router.push('#contact');
+        }}
       >
         <BsArrowRight className=" opacity-70  group-hover:translate-x-1 transition " />
       </TextButton>
