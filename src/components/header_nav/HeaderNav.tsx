@@ -11,7 +11,7 @@ export default function HeaderNav({}: HeaderNavProps) {
   const { activeNav, setActiveNav, setTimeOfLastClick } = useNavigationStore(
     (state) => state,
   );
-  console.log('activeNav', activeNav);
+
   return (
     <header className="z-[999] relative">
       <motion.div
