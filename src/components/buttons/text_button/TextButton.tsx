@@ -5,15 +5,18 @@ interface TextButtonProps {
   className?: string;
   text?: string;
   children?: React.ReactNode;
+  type?: 'button' | 'submit' | 'reset';
 }
 export default function TextButton({
   text,
   className,
   children,
+  type = 'button',
   ...otherProps
 }: TextButtonProps & DefaultButtonProps) {
   return (
     <button
+      type={type}
       className={cn(
         'w-fit h-fit px-4 py-2 text-white rounded-full flex flex-row items-center justify-center gap-2 outline-none transition-all cursor-pointer',
         className,
