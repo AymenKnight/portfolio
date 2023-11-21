@@ -1,3 +1,5 @@
+'use client';
+
 import HeaderNav from '../components/header_nav';
 import Intro from '../components/intro';
 import ControlsSection from '../components/controls_section';
@@ -6,6 +8,7 @@ import AboutMe from '../components/about_me';
 import ProjectsList from '../components/projects_list';
 import Skills from '../components/skills';
 import Experience from '../components/experience';
+import Contact from '../components/contact';
 
 export default function Home() {
   return (
@@ -18,6 +21,7 @@ export default function Home() {
       <ProjectsList />
       <Skills />
       <Experience />
+      <Contact />
     </main>
   );
 }
