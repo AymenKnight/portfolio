@@ -8,6 +8,7 @@ import commerce from '@/public/pictures/commerce.png';
 import walid from '@/public/pictures/walid.png';
 import realtor from '@/public/pictures/realtor.png';
 import nft from '@/public/pictures/nft.png';
+import { FaCode } from 'react-icons/fa6';
 
 export const links = [
   {
@@ -57,14 +58,14 @@ export const experiencesData = [
     description:
       'I worked as a full-stack developer on Dzbracket company for 2 years on part time.',
     date: '2020-2022',
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(FaCode),
   },
   {
     title: 'Freelance Developer',
     location: 'Remote',
     description: 'Working as a freelance software developer.',
     date: '2023-Now',
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(FaCode),
   },
 ] as const;
 
