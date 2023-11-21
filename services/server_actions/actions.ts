@@ -9,12 +9,16 @@ export const sendEmail = async (formData: FormData) => {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  resend.emails.send({
-    from: 'onboarding@resend.dev',
+  try {
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
 
-    to: 'daouadji505@gmail.com',
-    subject: `New Message From ${email}`,
-    text: `${message}`,
-    reply_to: email,
-  });
+      to: 'daouadji505@gmail.com',
+      subject: `New Message From ${email}`,
+      text: `${message}`,
+      reply_to: email,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
