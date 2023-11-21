@@ -19,7 +19,7 @@ export default function ProjectItem({
 }: ProjectItemProps) {
   const { ref: sectionRef } = useSectionInView({
     sectionName: '#projects',
-    threshold: 0.1,
+    threshold: 0.7,
   });
   const ref = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
