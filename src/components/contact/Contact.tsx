@@ -6,6 +6,7 @@ import TextButton from '../buttons/text_button';
 import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { sendEmail } from '@/services/server_actions/actions';
+import SubmitFormButton from '../buttons/submit_form_button';
 
 interface ContactProps {}
 export default function Contact({}: ContactProps) {
@@ -40,13 +41,7 @@ export default function Contact({}: ContactProps) {
         action={async (formData) => {
           console.log(formData.get('email'));
           console.log(formData.get('message'));
-          await sendEmail(formData)
-            .then(() => {
-              alert('Email sent successfully');
-            })
-            .catch((err) => {
-              alert(err);
-            });
+          await sendEmail(formData);
         }}
       >
         <input
@@ -65,15 +60,7 @@ export default function Contact({}: ContactProps) {
           className="border border-black/10 p-3 rounded-lg"
         />
 
-        <TextButton
-          type="submit"
-          text="Send"
-          className=" text-white px-3 py-2 rounded-lg w-full
-          bg-gray-900 hover:bg-gray-950 hover:scale-105 focus:scale-105 active:scale-100  
-          "
-        >
-          <FaPaperPlane className="w-5 h-4" />
-        </TextButton>
+        <SubmitFormButton />
       </form>
     </motion.section>
   );
