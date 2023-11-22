@@ -19,6 +19,17 @@ export const sendEmail = async (formData: FormData) => {
       reply_to: email,
     });
   } catch (error) {
-    console.log(error);
+    if (error instanceof Error) {
+      return {
+        error: error.message,
+      };
+    } else if (error && typeof error === 'object' && 'message' in error) {
+      return {
+        error: error.message as string,
+      };
+    }
+    return {
+      error: 'Something went wrong',
+    };
   }
 };

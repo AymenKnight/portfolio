@@ -40,7 +40,13 @@ export default function Contact({}: ContactProps) {
         action={async (formData) => {
           console.log(formData.get('email'));
           console.log(formData.get('message'));
-          await sendEmail(formData);
+          await sendEmail(formData)
+            .then(() => {
+              alert('Email sent successfully');
+            })
+            .catch((err) => {
+              alert(err);
+            });
         }}
       >
         <input
