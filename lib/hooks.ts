@@ -1,4 +1,4 @@
-import { useNavigationStore } from '@/services/navigationStore';
+import { useNavigationStore } from '@/services/stores/navigationStore';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
