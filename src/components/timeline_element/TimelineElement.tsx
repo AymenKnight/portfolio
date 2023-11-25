@@ -26,6 +26,12 @@ export default function TimelineElement({
     <div key={index} className="vertical-timeline-element">
       <VerticalTimelineElement
         // visible={inView}
+        intersectionObserverProps={{
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.9,
+          triggerOnce: false,
+        }}
         icon={experience.icon}
         date={experience.date}
         className="container-style "
