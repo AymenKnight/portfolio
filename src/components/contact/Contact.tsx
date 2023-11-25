@@ -36,7 +36,7 @@ export default function Contact({}: ContactProps) {
         or by using the form below.
       </p>
       <form
-        className="flex flex-col gap-3 w-full max-w-[40rem]"
+        className="flex flex-col gap-3 w-full max-w-[40rem] dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -55,14 +55,17 @@ export default function Contact({}: ContactProps) {
           required
           maxLength={500}
           placeholder="Insert your email"
-          className="border border-black/10 p-3 rounded-lg"
+          className="border border-black/10 p-3 rounded-lg dark:bg-white
+          dark:bg-opacity-90 dark:focus:bg-opacity-100 transition-all dark:outline-none
+          "
         />
         <textarea
           name="message"
           required
           maxLength={500}
           placeholder="Insert your message"
-          className="border border-black/10 p-3 rounded-lg"
+          className="border border-black/10 p-3 rounded-lg dark:bg-white
+          dark:bg-opacity-90 dark:focus:bg-opacity-100 transition-all dark:outline-none"
         />
 
         <SubmitFormButton />
