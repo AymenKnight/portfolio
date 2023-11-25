@@ -17,7 +17,10 @@ export default function TimelineElement({
   experience,
   index,
 }: TimelineElementProps) {
-  const { ref, inView } = useInView({});
+  const { ref, inView } = useInView({
+    threshold: 0.9,
+  });
+  console.log(experience.title, inView);
   const { mode, setMode } = useModeStore((state) => state);
   return (
     <div ref={ref} key={index} className="vertical-timeline-element">
