@@ -23,9 +23,9 @@ export default function TimelineElement({
   console.log(experience.title, inView);
   const { mode, setMode } = useModeStore((state) => state);
   return (
-    <div ref={ref} key={index} className="vertical-timeline-element">
+    <div key={index} className="vertical-timeline-element">
       <VerticalTimelineElement
-        visible={inView}
+        // visible={inView}
         icon={experience.icon}
         date={experience.date}
         className="container-style "
