@@ -1,4 +1,3 @@
-import { useInView } from 'react-intersection-observer';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import './style/index.css';
 import { useModeStore } from '@/services/stores/modeStore';
@@ -17,15 +16,10 @@ export default function TimelineElement({
   experience,
   index,
 }: TimelineElementProps) {
-  const { ref, inView } = useInView({
-    threshold: 0.9,
-  });
-  console.log(experience.title, inView);
-  const { mode, setMode } = useModeStore((state) => state);
+  const { mode } = useModeStore((state) => state);
   return (
     <div key={index} className="vertical-timeline-element">
       <VerticalTimelineElement
-        // visible={inView}
         intersectionObserverProps={{
           root: null,
           rootMargin: '0px',
