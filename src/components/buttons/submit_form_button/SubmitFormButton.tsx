@@ -16,10 +16,9 @@ export default function SubmitFormButton({}: SubmitFormButtonProps) {
       disabled={pending}
       className=" text-white px-3 py-2 rounded-lg w-full
   bg-gray-900 hover:bg-gray-950 hover:scale-105 focus:scale-105 active:scale-100  
- 
+   dark:bg-white dark:bg-opacity-30  dark:hover:bg-opacity-40
   disabled:scale-100  disabled:bg-opacity-60
   "
-      // dark:bg-white dark:bg-opacity-10
     >
       {pending ? (
         <div className="w-8 h-8 rounded-full animate-spin border-b-2 border-white" />
