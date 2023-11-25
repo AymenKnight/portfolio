@@ -27,11 +27,11 @@ export default function Skills({}: SkillsProps) {
       className="flex flex-col items-center justify-center gap-5 max-w-[53rem] leading-8 scroll-mt-28 py-5 "
     >
       <SectionHeading>My skills</SectionHeading>
-      <div className="flex  flex-wrap gap-2 justify-center text-lg font-medium text-gray-800">
+      <div className="flex  flex-wrap gap-2 justify-center text-lg font-medium text-gray-800 dark:text-white/80">
         {skillsData.map((tag, index) => (
           <motion.span
             key={index}
-            className="bg-white border border-black/[0.1]  tracking-wider  uppercase py-3 px-5 rounded-xl"
+            className="bg-white dark:bg-white/10  border border-black/[0.1]  tracking-wider  uppercase py-3 px-5 rounded-xl"
             variants={fadeIn}
             initial="initial"
             whileInView="animate"
