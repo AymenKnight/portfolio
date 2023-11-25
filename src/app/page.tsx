@@ -10,10 +10,11 @@ import Skills from '../components/skills';
 import Experience from '../components/experience';
 import Contact from '../components/contact';
 import { Toaster } from 'react-hot-toast';
+import SwitchModeButton from '../components/buttons/switch_mode_button';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center gap-10 px-5 ">
+    <main className="flex flex-col items-center justify-center gap-10 px-5 relative ">
       <HeaderNav />
       <Intro />
       <ControlsSection />
@@ -24,6 +25,7 @@ export default function Home() {
       <Experience />
       <Contact />
       <Toaster position="bottom-right" reverseOrder={false} />
+      <SwitchModeButton />
     </main>
   );
 }
