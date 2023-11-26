@@ -38,7 +38,7 @@ export default function CircleAvatar({}: CircleAvatarProps) {
       >
         <Image
           alt="Emoji"
-          src="http://purecatamphetamine.github.io/country-flag-icons/3x2/PS.svg"
+          src="https://purecatamphetamine.github.io/country-flag-icons/3x2/PS.svg"
           quality={95}
           width={30}
           height={30}
