@@ -48,7 +48,7 @@ export default function ControlsSection({}: ControlsSectionProps) {
             <BsLinkedin className="w-5 h-5" />
           </TextButton>
         </a>
-        <a href="https://github.com/daouadji506" target="_blank">
+        <a href="https://github.com/AymenKnight" target="_blank">
           <TextButton className="bg-white dark:bg-white/80   p-3 text-gray-700 hover:text-gray-900 focus:text-gray-900 active:text-gray-900 text-[1.25rem] hover:scale-110 focus:scale-110 active:scale-105 border border-black/10 ">
             <BsGithub className="w-5 h-5" />
           </TextButton>
