@@ -4,18 +4,24 @@ import { cn } from '@/lib/utils';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
+import TextButton from '../buttons/text_button';
+import { BsArrowRight, BsGithub } from 'react-icons/bs';
 
 interface ProjectItemProps {
   title: string;
   description: string;
   tags: string[];
   imageUrl: StaticImageData;
+  liveDemoUrl?: string;
+  sourceCodeUrl?: string;
 }
 export default function ProjectItem({
   title,
   description,
   tags,
   imageUrl,
+  liveDemoUrl,
+  sourceCodeUrl,
 }: ProjectItemProps) {
   const { ref: sectionRef } = useSectionInView({
     sectionName: '#projects',
@@ -71,6 +77,36 @@ export default function ProjectItem({
                 {tag}
               </span>
             ))}
+          </div>
+          <div className="flex justify-end gap-4  pb-5 pr-5">
+            <a href={liveDemoUrl} target="_blank">
+              <TextButton
+                text={liveDemoUrl ? 'Live Demo' : 'No Demo available'}
+                className={cn(
+                  ' group/demo bg-gray-900 dark:bg-gray-700    text-white border border-black/10 font-medium  ',
+                  liveDemoUrl &&
+                    'hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105',
+                )}
+                disabled={!liveDemoUrl}
+              >
+                {liveDemoUrl && (
+                  <BsArrowRight className=" opacity-70  group-hover/demo:translate-x-1 transition " />
+                )}
+              </TextButton>
+            </a>
+            <a href={sourceCodeUrl} target="_blank">
+              <TextButton
+                text={sourceCodeUrl ? 'Source Code' : 'Private Project'}
+                className={cn(
+                  'group/demo bg-gray-900 dark:bg-gray-700   text-white border border-black/10 font-medium ',
+                  sourceCodeUrl &&
+                    ' hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105 ',
+                )}
+                disabled={!sourceCodeUrl}
+              >
+                {sourceCodeUrl && <BsGithub className="w-5 h-5" />}
+              </TextButton>
+            </a>
           </div>
         </div>
       </motion.section>
