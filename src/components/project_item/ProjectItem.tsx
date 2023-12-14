@@ -42,13 +42,17 @@ export default function ProjectItem({
     >
       <motion.section
         ref={sectionRef}
-        className="  flex flex-col   gap-5 sm:justify-between relative
-      bg-gray-100 hover:bg-gray-200 transition rounded-2xl overflow-hidden border border-black/5 shadow-sm 
-        dark:bg-gray-100/40 dark:hover:bg-gray-200/30 
-      "
+        className={cn(
+          '  flex flex-col   gap-5 sm:justify-between relative',
+          ' bg-gray-100 hover:bg-gray-200 transition rounded-2xl overflow-hidden border border-black/5 shadow-sm ',
+          ' dark:bg-gray-100/40 dark:hover:bg-gray-200/30 ',
+        )}
       >
         <div
-          className="absolute hidden sm:block inset-0 bg-cover bg-center filter blur-sm h-[10rem] max-h-[10rem] sm:h-[26rem] sm:max-h-[26rem] "
+          className={cn(
+            'absolute hidden sm:block inset-0 bg-cover bg-center filter blur-sm h-[10rem] max-h-[10rem] sm:h-[26rem] sm:max-h-[26rem] ',
+            title === 'Lotus Launcher' && 'block',
+          )}
           style={{ backgroundImage: `url(${imageUrl.src})` }}
         ></div>
         <Image
