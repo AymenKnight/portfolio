@@ -64,7 +64,7 @@ export default function HeaderNav({}: HeaderNavProps) {
                   {link.name}
                   {activeNav === link.hash && (
                     <motion.div
-                      className="absolute bottom-0 left-0 h-full bg-gray-50 dark:bg-gray-700 rounded-2xl -z-10 w-full"
+                      className="absolute bottom-0 left-0 h-full bg-gray-50 dark:bg-gray-500 rounded-2xl -z-10 w-full"
                       layoutId="activeNav"
                       aria-hidden="true"
                       transition={{
