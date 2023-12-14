@@ -12,6 +12,7 @@ export default function TextButton({
   className,
   children,
   type = 'button',
+  disabled = false,
   ...otherProps
 }: TextButtonProps & DefaultButtonProps) {
   return (
@@ -20,6 +21,7 @@ export default function TextButton({
       className={cn(
         'w-fit h-fit px-4 py-2 text-white rounded-full flex flex-row items-center justify-center gap-2 outline-none transition-all cursor-pointer',
         className,
+        disabled && 'cursor-not-allowed opacity-40',
       )}
       {...otherProps}
     >
