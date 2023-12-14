@@ -75,6 +75,7 @@ export const projectsData = [
     description: 'A doctor management app built using Java.',
     tags: ['Java', 'JAVAFX', 'CSS'],
     imageUrl: drJarvis,
+    sourceCodeUrl: 'https://github.com/dzBrackets/dr-jarvis',
   },
   {
     title: 'Clothes Store',
@@ -82,6 +83,8 @@ export const projectsData = [
       'The app showcases various clothing items and provides features such as authentication with Firebase, persistence of chosen clothes by the user, and the ability to checkout using Stripe.',
     tags: ['React', 'JavaScript', 'CSS', 'SCSS', 'Firebase', 'Stripe'],
     imageUrl: commerce,
+    liveDemoUrl: 'https://e-commerce-website-fawn.vercel.app/',
+    sourceCodeUrl: 'https://github.com/AymenKnight/E-commerce-website',
   },
   {
     title: 'Pisri',
@@ -89,6 +92,7 @@ export const projectsData = [
       'Pisri is a mobile application built using React Native framework. It serves as a convenient online store where users can browse and purchase products. The app also provides features such as checkout and the ability to request a delivery person. Users are required to sign up or log in to access the app functionalities. Additionally, users can check the status of their deliveries from a specific screen.',
     tags: ['React Native', 'Expo', 'TypeScript', 'JavaScript', 'Firebase'],
     imageUrl: pisri,
+    sourceCodeUrl: 'https://github.com/AymenKnight/Pisri',
   },
   {
     title: 'DoctorIO',
@@ -105,6 +109,7 @@ export const projectsData = [
       'Prisma',
     ],
     imageUrl: doctorIO,
+    sourceCodeUrl: 'https://github.com/Danzo7/doctorIO',
   },
 
   {
@@ -113,6 +118,8 @@ export const projectsData = [
       'Lotus Launcher is a simple utility app for launching the Clinicord server. It provides a convenient way to launch the server and access its features.',
     tags: ['React', 'Tauri', 'TypeScript', 'JavaScript', 'Rust'],
     imageUrl: lotusLauncher,
+
+    sourceCodeUrl: 'https://github.com/AymenKnight/Lotus_Launcher',
   },
   {
     title: 'Image Gallery Store',
@@ -120,6 +127,7 @@ export const projectsData = [
       'The app showcases various images with the modern design and provides features such as persistence of chosen images by the user, and the ability to checkout.',
     tags: ['React', 'TypeScript', 'JavaScript', 'CSS', 'SCSS'],
     imageUrl: nft,
+    sourceCodeUrl: 'https://github.com/AymenKnight/art-collection',
   },
 
   // {
@@ -135,6 +143,8 @@ export const projectsData = [
       'Crafted a high-performance Realtor App API using NestJS, Prisma, and PostgreSQL, empowering real estate professionals with seamless data access and management.',
     tags: ['JavaScript', 'TypeScript', 'Nest.js', 'Prisma', 'PostgreSQL'],
     imageUrl: realtor,
+
+    sourceCodeUrl: 'https://github.com/AymenKnight/Realtor-app-api-with-nest',
   },
   {
     title: 'E-learning platform',
@@ -153,6 +163,8 @@ export const projectsData = [
       'AWS EC2',
     ],
     imageUrl: walid,
+    liveDemoUrl:
+      'https://play.google.com/store/apps/details?id=com.studybook&pcampaignid=web_share',
   },
 ];
 
