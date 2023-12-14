@@ -44,11 +44,11 @@ export default function ProjectItem({
         ref={sectionRef}
         className="  flex flex-col   gap-5 sm:justify-between relative
       bg-gray-100 hover:bg-gray-200 transition rounded-2xl overflow-hidden border border-black/5 shadow-sm 
-        dark:bg-gray-100/40 dark:hover:bg-gray-200/30
+        dark:bg-gray-100/40 dark:hover:bg-gray-200/30 
       "
       >
         <div
-          className="absolute hidden sm:block inset-0 bg-cover bg-center filter blur-sm h-[20rem] max-h-[20rem] sm:h-[26rem] sm:max-h-[26rem] "
+          className="absolute hidden sm:block inset-0 bg-cover bg-center filter blur-sm h-[10rem] max-h-[10rem] sm:h-[26rem] sm:max-h-[26rem] "
           style={{ backgroundImage: `url(${imageUrl.src})` }}
         ></div>
         <Image
@@ -56,8 +56,8 @@ export default function ProjectItem({
           alt={title}
           quality={100}
           className={cn(
-            `w-full h-[20rem] max-h-[20rem]    sm:h-[26rem]  sm:max-h-[26rem]  object-center  object-fill sm:object-contain
-          group-hover:scale-x-[1.05] 
+            `w-full h-[10rem] max-h-[10rem]    sm:h-[26rem]  sm:max-h-[26rem]  object-center  object-fill sm:object-contain
+          sm:group-hover:scale-x-[1.05] 
             transition self-end brightness-100
           `,
             title === 'Lotus Launcher' && 'object-contain',
@@ -68,7 +68,7 @@ export default function ProjectItem({
           <p className="text-lg font-medium text-gray-700 dark:text-white/80 leading-relaxed">
             {description}
           </p>
-          <div className="flex flex-wrap gap-1 pb-5">
+          <div className="flex flex-wrap gap-1">
             {tags.map((tag, index) => (
               <span
                 key={index}
@@ -78,14 +78,14 @@ export default function ProjectItem({
               </span>
             ))}
           </div>
-          <div className="flex justify-end gap-4  pb-5 pr-5">
+          <div className="flex flex-col sm:flex-row items-stretch sm:justify-end gap-2 sm:gap-4 px-4  py-5 sm:pr-5">
             <a href={liveDemoUrl} target="_blank">
               <TextButton
                 text={liveDemoUrl ? 'Live Demo' : 'No Demo available'}
                 className={cn(
-                  ' group/demo bg-gray-900 dark:bg-gray-700    text-white border border-black/10 font-medium  ',
+                  ' group/demo bg-gray-900     text-white border border-black/10 font-medium grow w-full ',
                   liveDemoUrl &&
-                    'hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105',
+                    'hover:bg-gray-950 hover:scale-[1.05] focus:scale-[1.05] active:scale-105  sm:hover:scale-110 sm:focus:scale-110 sm:active:scale-105',
                 )}
                 disabled={!liveDemoUrl}
               >
@@ -98,9 +98,9 @@ export default function ProjectItem({
               <TextButton
                 text={sourceCodeUrl ? 'Source Code' : 'Private Project'}
                 className={cn(
-                  'group/demo bg-gray-900 dark:bg-gray-700   text-white border border-black/10 font-medium ',
+                  'group/demo bg-gray-900 text-white border border-black/10 font-medium grow w-full ',
                   sourceCodeUrl &&
-                    ' hover:bg-gray-950 hover:scale-110 focus:scale-110 active:scale-105 ',
+                    ' hover:bg-gray-950 hover:scale-[1.05] focus:scale-[1.05] active:scale-105  sm:hover:scale-110 sm:focus:scale-110 sm:active:scale-105',
                 )}
                 disabled={!sourceCodeUrl}
               >
