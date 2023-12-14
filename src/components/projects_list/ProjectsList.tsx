@@ -20,6 +20,8 @@ export default function ProjectsList({}: ProjectsListProps) {
             description={project.description}
             tags={project.tags}
             imageUrl={project.imageUrl}
+            liveDemoUrl={project.liveDemoUrl}
+            sourceCodeUrl={project.sourceCodeUrl}
           />
         ))}
       </div>
