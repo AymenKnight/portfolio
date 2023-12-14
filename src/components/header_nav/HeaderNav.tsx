@@ -17,10 +17,10 @@ export default function HeaderNav({}: HeaderNavProps) {
       <motion.div
         className={cn(`header-nav   
       fixed top-0 left-1/2 -translate-x-1/2  
-      w-full min-h-[3.25rem] bg-gray-200 rounded-none border border-gray-200 border-opacity-40 bg-opacity-80 backdrop-blur-[0.5rem] 
+      w-full min-h-[3.25rem] bg-gray-200 rounded-none border border-gray-400 border-opacity-40 bg-opacity-80 backdrop-blur-[0.5rem] 
       sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full
       shadow-lg shadow-black/[0.03] 
-      dark:bg-gray-500 dark:bg-opacity-75 dark:border-black/10
+      dark:bg-gray-600 dark:bg-opacity-75 dark:border-black/10
       `)}
         initial={{ opacity: 0, y: -100, x: '-50%' }}
         animate={{ opacity: 1, y: 0, x: '-50%' }}
