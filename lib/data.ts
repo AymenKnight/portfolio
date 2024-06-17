@@ -8,6 +8,8 @@ import commerce from '@/public/pictures/commerce.png';
 import walid from '@/public/pictures/walid.png';
 import realtor from '@/public/pictures/realtor.png';
 import nft from '@/public/pictures/nft.png';
+import metalic from '@/public/pictures/metalic.png';
+import technoFrost from '@/public/pictures/technoFrost.png';
 import { FaCode } from 'react-icons/fa6';
 
 export const links = [
@@ -61,10 +63,19 @@ export const experiencesData = [
     icon: React.createElement(FaCode),
   },
   {
-    title: 'Freelance Developer',
-    location: 'Remote',
-    description: 'Working as a freelance software developer.',
-    date: '2023-Now',
+    title: 'Software Developer',
+    location: 'Blida',
+    description:
+      'I worked as a full-stack developer on BuySell SARL company on full time.',
+    date: '2023-2024',
+    icon: React.createElement(FaCode),
+  },
+  {
+    title: 'Web Developer',
+    location: 'Montreal Canada',
+    description:
+      "I'm currently working as a Web developer on Malopan Communications company on full time.",
+    date: '2024-now',
     icon: React.createElement(FaCode),
   },
 ] as const;
@@ -89,7 +100,7 @@ export const projectsData = [
   {
     title: 'Pisri',
     description:
-      'Pisri is a mobile application built using React Native framework. It serves as a convenient online store where users can browse and purchase products. The app also provides features such as checkout and the ability to request a delivery person. Users are required to sign up or log in to access the app functionalities. Additionally, users can check the status of their deliveries from a specific screen.',
+      'Pisri is a mobile application built using React Native. It serves as a convenient online store where users can browse and purchase products. The app also provides features such as checkout and the ability to request a delivery person. Users are required to sign up or log in to access the app functionalities. Additionally, users can check the status of their deliveries from a specific screen.',
     tags: ['React Native', 'Expo', 'TypeScript', 'JavaScript', 'Firebase'],
     imageUrl: pisri,
     sourceCodeUrl: 'https://github.com/AymenKnight/Pisri',
@@ -166,6 +177,35 @@ export const projectsData = [
     liveDemoUrl:
       'https://play.google.com/store/apps/details?id=com.studybook&pcampaignid=web_share',
   },
+  {
+    title: 'Metalunic website',
+    description:"Built a styled website for canadian-american company using Next, React, TypeScript, Tailwind, and SCSS. ensuring a user-friendly experience for the website. and developed an intuitive Admin Dashboard using the same technologies.",
+    tags: [
+      "Next",
+      'React',
+      'Tailwind',
+      'SCSS',
+      'TypeScript',
+      ".NET",
+    ],
+    imageUrl: metalic,
+    liveDemoUrl:
+      'https://metalunic.com/',
+  },
+  {
+    title: 'Technofrost website',
+    description:"Built a landing page website for canadian company using Next, React, TypeScript, Tailwind, and SCSS. ensuring a user-friendly experience for the website.",
+    tags: [
+      "Next",
+      'React',
+      'Tailwind',
+      'SCSS',
+      'TypeScript',
+    ],
+    imageUrl: technoFrost,
+    liveDemoUrl:
+      'https://technofrost.ca',
+  },
 ];
 
 export const skillsData = [
@@ -193,4 +233,7 @@ export const skillsData = [
   'Tauri',
   'Java',
   'Supabase',
+  'Firebase',
+  ".NET",
+  "C#",
 ] as const;
