@@ -4,7 +4,7 @@ import { FaPaperPlane } from 'react-icons/fa6';
 import TextButton from '../text_button';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { experimental_useFormStatus as useFormStatus } from 'react-dom';
+import { useFormStatus } from 'react-dom';
 
 interface SubmitFormButtonProps {}
 export default function SubmitFormButton({}: SubmitFormButtonProps) {
