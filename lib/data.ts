@@ -10,6 +10,7 @@ import realtor from '@/public/pictures/realtor.png';
 import nft from '@/public/pictures/nft.png';
 import metalic from '@/public/pictures/metalic.png';
 import technoFrost from '@/public/pictures/technoFrost.png';
+import malopan from '@/public/pictures/malopan.png';
 import { FaCode } from 'react-icons/fa6';
 
 export const links = [
@@ -205,6 +206,21 @@ export const projectsData = [
     imageUrl: technoFrost,
     liveDemoUrl:
       'https://technofrost.ca',
+  },
+  {
+    title: 'Malopan  website',
+    description:"Built a landing page website for IT canadian company using Next, React, TypeScript, Tailwind, and SCSS. ensuring a user-friendly experience for the website and a custom CMS blog which have an intuitive Admin Dashboard using the same technologies.",
+    tags: [
+      "Next",
+      'React',
+      'Tailwind',
+      'SCSS',
+      'TypeScript',
+      "Framer Motion",
+    ],
+    imageUrl: malopan,
+    liveDemoUrl:
+      'https://malopan.com/',
   },
 ];
 
