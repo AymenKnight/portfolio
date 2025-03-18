@@ -11,6 +11,7 @@ import nft from '@/public/pictures/nft.png';
 import metalic from '@/public/pictures/metalic.png';
 import technoFrost from '@/public/pictures/technoFrost.png';
 import malopan from '@/public/pictures/malopan.png';
+import hedpay from '@/public/pictures/hedpay.png';
 import { FaCode } from 'react-icons/fa6';
 
 export const links = [
@@ -222,6 +223,21 @@ export const projectsData = [
     liveDemoUrl:
       'https://malopan.com/',
   },
+  {
+    title: 'Hedpay website',
+    description:"Built a landing page website for Hedpay company using Next, React, TypeScript and Tailwind. ensuring a user-friendly experience and responsiveness for the website.",
+    tags: [
+      "Next",
+      'React',
+      'Tailwind',
+      'TypeScript',
+      "Framer Motion",
+    ],
+    imageUrl: hedpay,
+    liveDemoUrl:
+      'https://hedpay.com/',
+
+  }
 ];
 
 export const skillsData = [
